@@ -1,0 +1,11 @@
+D:\cnpm\Quanlidetai\DTO\bin\Debug\net9.0\DTO.deps.json
+D:\cnpm\Quanlidetai\DTO\bin\Debug\net9.0\DTO.dll
+D:\cnpm\Quanlidetai\DTO\bin\Debug\net9.0\DTO.pdb
+D:\cnpm\Quanlidetai\DTO\obj\Debug\net9.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\cnpm\Quanlidetai\DTO\obj\Debug\net9.0\DTO.AssemblyInfoInputs.cache
+D:\cnpm\Quanlidetai\DTO\obj\Debug\net9.0\DTO.AssemblyInfo.cs
+D:\cnpm\Quanlidetai\DTO\obj\Debug\net9.0\DTO.csproj.CoreCompileInputs.cache
+D:\cnpm\Quanlidetai\DTO\obj\Debug\net9.0\DTO.dll
+D:\cnpm\Quanlidetai\DTO\obj\Debug\net9.0\refint\DTO.dll
+D:\cnpm\Quanlidetai\DTO\obj\Debug\net9.0\DTO.pdb
+D:\cnpm\Quanlidetai\DTO\obj\Debug\net9.0\ref\DTO.dll

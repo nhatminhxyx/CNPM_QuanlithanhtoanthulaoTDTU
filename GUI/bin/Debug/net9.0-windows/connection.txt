@@ -1,0 +1,1 @@
+Data Source=DESKTOP-AB3IO93;Initial Catalog=Quanlithulao;Integrated Security=True;TrustServerCertificate=True

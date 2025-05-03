@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="ChiTietDeTai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DangKiDeTai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Detai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Giangvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Sinhvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Thanhtoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
