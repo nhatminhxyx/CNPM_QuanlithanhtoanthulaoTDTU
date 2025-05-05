@@ -35,6 +35,7 @@
             btnDuyet = new Button();
             btnTuChoi = new Button();
             dgvDangKyDeTai = new DataGridView();
+            btnHuy = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvDangKyDeTai).BeginInit();
             SuspendLayout();
             // 
@@ -58,9 +59,9 @@
             // 
             // btnTimKiem
             // 
-            btnTimKiem.Location = new Point(12, 105);
+            btnTimKiem.Location = new Point(24, 105);
             btnTimKiem.Name = "btnTimKiem";
-            btnTimKiem.Size = new Size(168, 46);
+            btnTimKiem.Size = new Size(140, 46);
             btnTimKiem.TabIndex = 2;
             btnTimKiem.Text = "Tìm kiếm";
             btnTimKiem.UseVisualStyleBackColor = true;
@@ -68,9 +69,9 @@
             // 
             // btnDangKy
             // 
-            btnDangKy.Location = new Point(208, 105);
+            btnDangKy.Location = new Point(170, 105);
             btnDangKy.Name = "btnDangKy";
-            btnDangKy.Size = new Size(168, 46);
+            btnDangKy.Size = new Size(140, 46);
             btnDangKy.TabIndex = 3;
             btnDangKy.Text = "Đăng ký";
             btnDangKy.UseVisualStyleBackColor = true;
@@ -78,9 +79,9 @@
             // 
             // btnDuyet
             // 
-            btnDuyet.Location = new Point(402, 105);
+            btnDuyet.Location = new Point(316, 105);
             btnDuyet.Name = "btnDuyet";
-            btnDuyet.Size = new Size(168, 46);
+            btnDuyet.Size = new Size(140, 46);
             btnDuyet.TabIndex = 4;
             btnDuyet.Text = "Duyệt";
             btnDuyet.UseVisualStyleBackColor = true;
@@ -88,9 +89,9 @@
             // 
             // btnTuChoi
             // 
-            btnTuChoi.Location = new Point(592, 105);
+            btnTuChoi.Location = new Point(462, 105);
             btnTuChoi.Name = "btnTuChoi";
-            btnTuChoi.Size = new Size(168, 46);
+            btnTuChoi.Size = new Size(140, 46);
             btnTuChoi.TabIndex = 5;
             btnTuChoi.Text = "Từ chối";
             btnTuChoi.UseVisualStyleBackColor = true;
@@ -106,11 +107,22 @@
             dgvDangKyDeTai.TabIndex = 6;
             dgvDangKyDeTai.CellClick += dgvDangKyDeTai_CellClick;
             // 
+            // btnHuy
+            // 
+            btnHuy.Location = new Point(608, 105);
+            btnHuy.Name = "btnHuy";
+            btnHuy.Size = new Size(140, 46);
+            btnHuy.TabIndex = 6;
+            btnHuy.Text = "Hủy";
+            btnHuy.UseVisualStyleBackColor = true;
+            btnHuy.Click += btnHuy_Click;
+            // 
             // DangKiDeTai
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(772, 418);
+            Controls.Add(btnHuy);
             Controls.Add(dgvDangKyDeTai);
             Controls.Add(btnTuChoi);
             Controls.Add(btnDuyet);
@@ -135,5 +147,6 @@
         private Button btnDuyet;
         private Button btnTuChoi;
         private DataGridView dgvDangKyDeTai;
+        private Button btnHuy;
     }
 }

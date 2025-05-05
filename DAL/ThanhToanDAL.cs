@@ -20,15 +20,7 @@ namespace DAL
         }
 
         // 2. Lấy MaGV theo MaDeTai
-        public string GetMaGVByMaDeTai(string maDeTai)
-        {
-            using var conn = SqlConnectionData.Connect();
-            conn.Open();
-            string sql = "SELECT MaGV FROM DeTai WHERE MaDeTai = @MaDeTai";
-            using var cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@MaDeTai", maDeTai);
-            return cmd.ExecuteScalar() as string;
-        }
+       
 
         // 3. Lấy kinh phí theo MaDeTai
         public double? GetKinhPhiByMaDeTai(string maDeTai)
@@ -134,6 +126,62 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@MaDeTai", maDeTai);
                 return (int)cmd.ExecuteScalar() > 0;
             }
-        
+        public DataTable GetDeTaiByMaDeTai(string maDeTai)
+        {
+            using var conn = SqlConnectionData.Connect();
+            conn.Open();
+            const string sql = @"
+            SELECT
+              dt.MaDeTai,
+              dt.TenDeTai,
+              dt.MaGV,
+              dt.KinhPhi,
+              CASE 
+                WHEN EXISTS (
+                  SELECT 1 FROM ThanhToan tt
+                  WHERE tt.MaDeTai = dt.MaDeTai
+                    AND tt.TrangThai = N'Đã thanh toán'
+                ) THEN N'Đã thanh toán'
+                ELSE N'Chưa thanh toán'
+              END AS TrangThai
+            FROM DeTai dt
+            WHERE dt.MaDeTai = @MaDeTai;
+        ";
+            using var cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@MaDeTai", maDeTai);
+            using var da = new SqlDataAdapter(cmd);
+            var dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+        public DataTable GetDeTaiByMaGV(string maGV)
+            {
+            using var conn = SqlConnectionData.Connect();
+            conn.Open();
+            const string sql = @"
+            SELECT
+              dt.MaDeTai,
+              dt.TenDeTai,
+              dt.MaGV,
+              dt.KinhPhi,
+              CASE 
+                WHEN EXISTS (
+                  SELECT 1 FROM ThanhToan tt
+                  WHERE tt.MaDeTai = dt.MaDeTai
+                    AND tt.TrangThai = N'Đã thanh toán'
+                ) THEN N'Đã thanh toán'
+                ELSE N'Chưa thanh toán'
+              END AS TrangThai
+            FROM DeTai dt
+            WHERE dt.MaGV = @MaGV;
+        ";
+            using var cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@MaGV", maGV);
+            using var da = new SqlDataAdapter(cmd);
+            var dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
     }
 }
+

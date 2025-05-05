@@ -138,14 +138,12 @@ namespace GUI
             cbHocVi.SelectedIndex = -1;
         }
 
-  
+
 
         private void cbKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbKhoa.SelectedIndex >= 0 && !isEditMode)
-            {
-                txtMaGV.Text = bus.GenerateMaGV(cbKhoa.SelectedValue.ToString());
-            }
+
+
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -194,13 +192,21 @@ namespace GUI
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            string key = !string.IsNullOrEmpty(txtMaGV.Text.Trim()) ? txtMaGV.Text.Trim() : txtHoTen.Text.Trim();
-            if (string.IsNullOrWhiteSpace(key))
+            string maGV = txtMaGV.Text.Trim();
+            string hoTen = txtHoTen.Text.Trim();
+            string maKhoa = cbKhoa.SelectedValue?.ToString();
+
+            // Nếu không nhập gì hết thì load toàn bộ giảng viên
+            if (string.IsNullOrWhiteSpace(maGV) && string.IsNullOrWhiteSpace(hoTen) && string.IsNullOrWhiteSpace(maKhoa))
             {
-                MessageBox.Show("Vui lòng nhập mã hoặc tên giảng viên để tìm kiếm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                var allGV = bus.LayTatCaGiangVien();
+                dgvGiangVien.DataSource = allGV;
+                SetViewMode();
                 return;
             }
-            var dt = bus.SearchGiangVien(key);
+
+            // Tìm kiếm theo mã hoặc tên (và có thể theo mã khoa nếu có chọn)
+            var dt = bus.SearchGiangVien(maGV, hoTen, maKhoa);
             if (dt.Rows.Count > 0)
             {
                 dgvGiangVien.DataSource = dt;
@@ -213,6 +219,7 @@ namespace GUI
                 SetAddMode();
             }
         }
+
 
         private void dgvGiangVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -270,7 +277,7 @@ namespace GUI
 
             // Validation
             if (string.IsNullOrWhiteSpace(txtHoTen.Text) || cbKhoa.SelectedIndex == -1 || cbHocVi.SelectedIndex == -1 ||
-                string.IsNullOrWhiteSpace(txtSdt.Text) || string.IsNullOrWhiteSpace(txtQueQuan.Text) )
+                string.IsNullOrWhiteSpace(txtSdt.Text) || string.IsNullOrWhiteSpace(txtQueQuan.Text))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ và đúng định dạng thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -306,6 +313,18 @@ namespace GUI
         {
             ClearForm();
             dgvGiangVien.DataSource = null;
+        }
+
+        private void txtMaGV_Click(object sender, EventArgs e)
+        {
+            if (Session.Role == "Admin")
+            {
+                if (!isEditMode && cbKhoa.SelectedIndex >= 0 && string.IsNullOrWhiteSpace(txtMaGV.Text))
+                {
+                    txtMaGV.Text = bus.GenerateMaGV(cbKhoa.SelectedValue.ToString());
+                }
+            }
+
         }
     }
 }

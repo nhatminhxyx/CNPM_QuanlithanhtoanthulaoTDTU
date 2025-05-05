@@ -1,8 +1,3 @@
-D:\cnpm\Quanlidetai\BUS\obj\Debug\net9.0\BUS.csproj.AssemblyReference.cache
-D:\cnpm\Quanlidetai\BUS\obj\Debug\net9.0\BUS.GeneratedMSBuildEditorConfig.editorconfig
-D:\cnpm\Quanlidetai\BUS\obj\Debug\net9.0\BUS.AssemblyInfoInputs.cache
-D:\cnpm\Quanlidetai\BUS\obj\Debug\net9.0\BUS.AssemblyInfo.cs
-D:\cnpm\Quanlidetai\BUS\obj\Debug\net9.0\BUS.csproj.CoreCompileInputs.cache
 D:\cnpm\Quanlidetai\BUS\bin\Debug\net9.0\BUS.deps.json
 D:\cnpm\Quanlidetai\BUS\bin\Debug\net9.0\BUS.dll
 D:\cnpm\Quanlidetai\BUS\bin\Debug\net9.0\BUS.pdb
@@ -10,6 +5,12 @@ D:\cnpm\Quanlidetai\BUS\bin\Debug\net9.0\DAL.dll
 D:\cnpm\Quanlidetai\BUS\bin\Debug\net9.0\DTO.dll
 D:\cnpm\Quanlidetai\BUS\bin\Debug\net9.0\DAL.pdb
 D:\cnpm\Quanlidetai\BUS\bin\Debug\net9.0\DTO.pdb
+D:\cnpm\Quanlidetai\BUS\obj\Debug\net9.0\BUS.csproj.AssemblyReference.cache
+D:\cnpm\Quanlidetai\BUS\obj\Debug\net9.0\BUS.GeneratedMSBuildEditorConfig.editorconfig
+D:\cnpm\Quanlidetai\BUS\obj\Debug\net9.0\BUS.AssemblyInfoInputs.cache
+D:\cnpm\Quanlidetai\BUS\obj\Debug\net9.0\BUS.AssemblyInfo.cs
+D:\cnpm\Quanlidetai\BUS\obj\Debug\net9.0\BUS.csproj.CoreCompileInputs.cache
+D:\cnpm\Quanlidetai\BUS\obj\Debug\net9.0\BUS.sourcelink.json
 D:\cnpm\Quanlidetai\BUS\obj\Debug\net9.0\BUS.csproj.Up2Date
 D:\cnpm\Quanlidetai\BUS\obj\Debug\net9.0\BUS.dll
 D:\cnpm\Quanlidetai\BUS\obj\Debug\net9.0\refint\BUS.dll

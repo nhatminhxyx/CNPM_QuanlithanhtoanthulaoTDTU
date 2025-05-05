@@ -111,22 +111,37 @@ namespace DAL
             return dt;
         }
 
-        public DataTable SearchGiangVien(string searchValue)
+        public DataTable SearchGiangVien(string maGV, string hoTen, string maKhoa)
         {
-            DataTable dt = new DataTable();
+            List<string> conditions = new List<string>();
+            if (!string.IsNullOrWhiteSpace(maGV))
+                conditions.Add("MaGV LIKE @MaGV");
+            if (!string.IsNullOrWhiteSpace(hoTen))
+                conditions.Add("HoTen LIKE @HoTen");
+            if (!string.IsNullOrWhiteSpace(maKhoa))
+                conditions.Add("MaKhoa = @MaKhoa");
+
+            string whereClause = conditions.Count > 0 ? "WHERE " + string.Join(" AND ", conditions) : "";
+
+            string query = $"SELECT * FROM GiangVien {whereClause}";
+
             using (SqlConnection conn = SqlConnectionData.Connect())
             {
-                conn.Open();
-                string query = "SELECT MaGV, HoTen, MaKhoa, HocVi, SoDienThoai, QueQuan FROM GiangVien WHERE MaGV = @SearchValue OR HoTen LIKE '%' + @SearchValue + '%' ORDER BY HoTen ASC";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@SearchValue", searchValue);
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    adapter.Fill(dt);
-                }
+                SqlCommand cmd = new SqlCommand(query, conn);
+                if (!string.IsNullOrWhiteSpace(maGV))
+                    cmd.Parameters.AddWithValue("@MaGV", "%" + maGV + "%");
+                if (!string.IsNullOrWhiteSpace(hoTen))
+                    cmd.Parameters.AddWithValue("@HoTen", "%" + hoTen + "%");
+                if (!string.IsNullOrWhiteSpace(maKhoa))
+                    cmd.Parameters.AddWithValue("@MaKhoa", maKhoa);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
             }
-            return dt;
         }
+
         public bool UpdateGiangVien(GiangVienDTO giangVien)
         {
             using (SqlConnection conn = SqlConnectionData.Connect())
@@ -145,6 +160,31 @@ namespace DAL
                     int rowsAffected = cmd.ExecuteNonQuery(); // Kiểm tra số dòng bị ảnh hưởng
                     return rowsAffected > 0; // Trả về true nếu có dữ liệu được cập nhật
                 }
+            }
+        }
+        public DataTable LayTatCaGiangVien()
+        {
+            string query = "SELECT * FROM GiangVien";
+            using (SqlConnection conn = SqlConnectionData.Connect())
+            {
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
+        public DataTable TimGiangVienTheoKhoa(string maKhoa)
+        {
+            string query = "SELECT * FROM GiangVien WHERE MaKhoa = @MaKhoa";
+            using (SqlConnection conn = SqlConnectionData.Connect())
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@MaKhoa", maKhoa);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
             }
         }
 

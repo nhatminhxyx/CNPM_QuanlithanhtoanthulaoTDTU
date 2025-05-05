@@ -15,6 +15,8 @@ namespace GUI
         public ConfigForm()
         {
             InitializeComponent();
+            this.AcceptButton = btnSave;    // Enter sẽ tự động invoke Click của btnSave
+            this.CancelButton = btnCancel;  // Esc sẽ invoke Click của btnCancel
         }
 
         private void ConfigForm_Load(object sender, EventArgs e)
@@ -63,7 +65,7 @@ namespace GUI
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Application.Exit(); // Thoát ứng dụng nếu người dùng hủy cấu hình
+            this.Close(); // Thoát ứng dụng nếu người dùng hủy cấu hình
         }
     }
 }

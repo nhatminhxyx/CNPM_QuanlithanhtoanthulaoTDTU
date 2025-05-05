@@ -55,6 +55,10 @@ namespace GUI
             {
                 MessageBox.Show(result, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            this.Hide();
+            DangNhap login = new DangNhap();
+            login.Show();
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

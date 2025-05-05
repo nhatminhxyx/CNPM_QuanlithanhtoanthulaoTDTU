@@ -38,6 +38,7 @@
             pictureBox1 = new PictureBox();
             label3 = new Label();
             groupBox2 = new GroupBox();
+            checkBox1 = new CheckBox();
             linkLabel1 = new LinkLabel();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -132,6 +133,7 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(checkBox1);
             groupBox2.Controls.Add(linkLabel1);
             groupBox2.Controls.Add(btnExit);
             groupBox2.Controls.Add(btnLogin);
@@ -145,6 +147,17 @@
             groupBox2.TabIndex = 8;
             groupBox2.TabStop = false;
             groupBox2.Text = "Thông tin đăng nhập";
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(6, 129);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(127, 24);
+            checkBox1.TabIndex = 6;
+            checkBox1.Text = "Hiện mật khẩu";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // linkLabel1
             // 
@@ -189,5 +202,6 @@
         private Label label3;
         private GroupBox groupBox2;
         private LinkLabel linkLabel1;
+        private CheckBox checkBox1;
     }
 }

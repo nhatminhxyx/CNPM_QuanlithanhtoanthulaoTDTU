@@ -5,6 +5,7 @@ D:\cnpm\Quanlidetai\DTO\obj\Debug\net9.0\DTO.GeneratedMSBuildEditorConfig.editor
 D:\cnpm\Quanlidetai\DTO\obj\Debug\net9.0\DTO.AssemblyInfoInputs.cache
 D:\cnpm\Quanlidetai\DTO\obj\Debug\net9.0\DTO.AssemblyInfo.cs
 D:\cnpm\Quanlidetai\DTO\obj\Debug\net9.0\DTO.csproj.CoreCompileInputs.cache
+D:\cnpm\Quanlidetai\DTO\obj\Debug\net9.0\DTO.sourcelink.json
 D:\cnpm\Quanlidetai\DTO\obj\Debug\net9.0\DTO.dll
 D:\cnpm\Quanlidetai\DTO\obj\Debug\net9.0\refint\DTO.dll
 D:\cnpm\Quanlidetai\DTO\obj\Debug\net9.0\DTO.pdb

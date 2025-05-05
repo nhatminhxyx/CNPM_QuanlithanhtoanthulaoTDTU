@@ -6,6 +6,7 @@ using BUS;
 using DTO;
 using System.Drawing;
 using System.Drawing.Printing;
+using GUI.Common;
 
 namespace GUI
 {
@@ -22,18 +23,26 @@ namespace GUI
         private void Thanhtoan_Load(object sender, EventArgs e)
         {
             // chỉ lấy đề tài chưa thanh toán
-            dgvThanhToan.DataSource = bus.GetDeTaiChuaThanhToan();
-            txtMaGV.ReadOnly = true;
+            if(Session.Role == "Admin")
+            {
+                dgvThanhToan.DataSource = bus.GetDeTaiChuaThanhToan();
+            }
+            
+            txtMaGV.ReadOnly = false;
+            if (Session.Role == "GV")
+            {
+                // Giảng viên: chỉ cho tìm kiếm
+                btnThanhToan.Enabled = false;
+                btnXuatBaoCao.Enabled = false;
+                btnIn.Enabled = false;
+            }
         }
 
 
         // Khi gõ MaDeTai trực tiếp → đổ MaGV
         private void txtMaDeTai_TextChanged(object s, EventArgs e)
         {
-            var md = txtMaDeTai.Text.Trim();
-            txtMaGV.Text = string.IsNullOrEmpty(md)
-                ? ""
-                : bus.GetMaGVByMaDeTai(md) ?? "";
+     
         }
 
         // Thanh toán
@@ -164,19 +173,42 @@ namespace GUI
         }
 
         // Tìm kiếm theo MaDeTai hoặc theo ngày
-        private void btnTimKiem_Click(object s, EventArgs e)
+        private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            var md = txtMaDeTai.Text.Trim();
-            if (!string.IsNullOrEmpty(md))
+            var maDT = txtMaDeTai.Text.Trim();
+            var maGV = txtMaGV.Text.Trim();
+
+            DataTable result = null;
+
+            if (!string.IsNullOrEmpty(maDT))
             {
-                dgvThanhToan.DataSource = bus.GetThanhToanByMaDeTai(md);
+                // Ưu tiên tìm theo mã đề tài
+                result = bus.GetDeTaiByMaDeTai(maDT);
+            }
+            else if (!string.IsNullOrEmpty(maGV))
+            {
+                // Nếu chỉ nhập mã giảng viên
+                result = bus.GetDeTaiByMaGV(maGV);
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập mã đề tài hoặc mã giảng viên.",
+                                "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            var from = dtpTuNgay.Value.Date;
-            var to = dtpDenNgay.Value.Date;
-            dgvThanhToan.DataSource = bus.GetThanhToanByDateRange(from, to);
+            if (result == null || result.Rows.Count == 0)
+            {
+                MessageBox.Show("Không tìm thấy kết quả nào.",
+                                "Kết quả rỗng", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvThanhToan.DataSource = null;
+            }
+            else
+            {
+                dgvThanhToan.DataSource = result;
+            }
         }
+
 
         // Xuất CSV
         private void btnXuatBaoCao_Click(object s, EventArgs e)
@@ -253,7 +285,18 @@ namespace GUI
         {
             txtMaDeTai.Clear();
             txtMaGV.Clear();
-            dgvThanhToan.DataSource = bus.GetDeTaiChuaThanhToan();
+
+            if (Session.Role == "GV")
+            {
+                // GV hủy → không hiển thị gì cả
+                dgvThanhToan.DataSource = null;
+                dgvThanhToan.Rows.Clear(); // nếu cần chắc chắn xóa luôn dữ liệu cũ
+            }
+            else
+            {
+                // Admin → hiển thị lại toàn bộ đề tài chưa thanh toán
+                dgvThanhToan.DataSource = bus.GetDeTaiChuaThanhToan();
+            }
         }
 
         private void btnIn_Click(object sender, EventArgs e)
@@ -295,5 +338,6 @@ namespace GUI
             lastPrintedVoucher = dto;
             PrintVoucher(dto);
         }
+       
     }
 }

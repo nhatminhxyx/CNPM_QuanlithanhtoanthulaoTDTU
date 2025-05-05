@@ -56,10 +56,11 @@ namespace BUS
             dal.DeleteGiangVien(maGV);
         }
 
-        public DataTable SearchGiangVien(string searchValue)
+        public DataTable SearchGiangVien(string maGV, string hoTen, string maKhoa)
         {
-            return dal.SearchGiangVien(searchValue);
+            return dal.SearchGiangVien(maGV, hoTen, maKhoa);
         }
+
 
         public bool UpdateGiangVien(GiangVienDTO giangVien)
         {
@@ -69,6 +70,15 @@ namespace BUS
         public DataTable GetAllKhoa()
         {
             return dal.GetAllKhoa();
+        }
+        public DataTable LayTatCaGiangVien()
+        {
+            return dal.LayTatCaGiangVien();
+        }
+
+        public DataTable TimGiangVienTheoKhoa(string maKhoa)
+        {
+            return dal.TimGiangVienTheoKhoa(maKhoa);
         }
 
     }

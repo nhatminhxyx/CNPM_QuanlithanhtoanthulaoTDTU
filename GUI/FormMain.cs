@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GUI.Common;
+
 namespace GUI
 {
     public partial class FormMain : Form
@@ -15,89 +16,79 @@ namespace GUI
         public FormMain()
         {
             InitializeComponent();
-            thanhToánToolStripMenuItem.Enabled = (Session.Role=="Admin");
-            
+            thanhToánToolStripMenuItem.Enabled = (Session.Role == "Admin" || Session.Role == "GV");
+        }
+
+        // Hàm mở form con tái sử dụng
+        private void OpenChildForm<T>() where T : Form, new()
+        {
+            // Đóng tất cả các form con khác
+            foreach (Form child in this.MdiChildren)
+            {
+                child.Close();  // đóng form hiện tại
+            }
+
+            // Tạo và mở form con mới
+            T form = new T
+            {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
+
+            // Khi form con đóng thì hiện lại nút đăng xuất
+            form.FormClosed += (s, args) =>
+            {
+                btnDangXuat.Visible = true;
+            };
+
+            // Ẩn nút đăng xuất trước khi mở form con
+            btnDangXuat.Visible = false;
+
+            form.Show();
         }
 
         private void đềTàiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Detai formDeTai = this.MdiChildren.OfType<Detai>().FirstOrDefault();
-            if (formDeTai == null)
-            {
-                formDeTai = new Detai();
-                formDeTai.MdiParent = this; // Gán Form Main làm MDI Parent
-                formDeTai.WindowState = FormWindowState.Maximized;
-                formDeTai.Show();
-            }
-            else
-            {
-                // Nếu đã mở, làm nổi bật form đó
-                formDeTai.Activate();
-            }
+            OpenChildForm<Detai>();
         }
 
         private void gIảngViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Giangvien formGiangvien = this.MdiChildren.OfType<Giangvien>().FirstOrDefault();
-            if (formGiangvien == null)
-            {
-                formGiangvien = new Giangvien();
-                formGiangvien.MdiParent = this;
-                formGiangvien.WindowState = FormWindowState.Maximized;
-                formGiangvien.Show();
-            }
-            else
-            {
-                formGiangvien.Activate();
-            }
+            OpenChildForm<Giangvien>();
         }
 
         private void sinhViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Sinhvien formSinhvien = this.MdiChildren.OfType<Sinhvien>().FirstOrDefault();
-            if (formSinhvien == null)
-            {
-                formSinhvien = new Sinhvien();
-                formSinhvien.MdiParent = this;
-                formSinhvien.WindowState = FormWindowState.Maximized;
-                formSinhvien.Show();
-            }
-            else
-            {
-                formSinhvien.Activate();
-            }
+            OpenChildForm<Sinhvien>();
         }
 
         private void đăngKíĐềTàiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DangKiDeTai formDkDeTai = this.MdiChildren.OfType<DangKiDeTai>().FirstOrDefault();
-            if (formDkDeTai == null)
-            {
-                formDkDeTai = new DangKiDeTai();
-                formDkDeTai.MdiParent = this;
-                formDkDeTai.WindowState = FormWindowState.Maximized;
-                formDkDeTai.Show();
-            }
-            else
-            {
-                formDkDeTai.Activate();
-            }
+            OpenChildForm<DangKiDeTai>();
         }
 
         private void thanhToánToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Thanhtoan formThanhtoan = this.MdiChildren.OfType<Thanhtoan>().FirstOrDefault();
-            if (formThanhtoan == null)
+            OpenChildForm<Thanhtoan>();
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
             {
-                formThanhtoan = new Thanhtoan();
-                formThanhtoan.MdiParent = this;
-                formThanhtoan.WindowState = FormWindowState.Maximized;
-                formThanhtoan.Show();
+                MessageBox.Show("Đăng xuất thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.Hide(); // Ẩn form chính
+
+                DangNhap loginForm = new DangNhap();
+                loginForm.Show(); // Hiện form đăng nhập
             }
-            else
-            {
-                formThanhtoan.Activate();
-            }
+        }
+
+        private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

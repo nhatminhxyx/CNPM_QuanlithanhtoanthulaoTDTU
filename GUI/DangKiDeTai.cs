@@ -17,6 +17,12 @@ namespace GUI
         public DangKiDeTai()
         {
             InitializeComponent();
+            txtMaDeTai.Multiline = true;
+
+
+            // Nếu cần bấm chỉnh chiều cao của TextBox cho phù hợp  
+            // (ví dụ bạn để Height = font.Height + padding):
+            txtMaDeTai.Height = txtMaDeTai.Font.Height + 8;
         }
 
         private void DangKiDeTai_Load(object sender, EventArgs e)
@@ -28,11 +34,19 @@ namespace GUI
         private void ApplyRolePermissions()
         {
             bool isSV = Session.Role == "SV";
+            bool isAdmin = Session.Role == "Admin";
+
+            // Chỉ SV mới được đăng ký
             btnDangKy.Enabled = isSV;
-            btnTimKiem.Enabled = isSV;
+
+            // Duyệt / từ chối thì không phải SV
             btnDuyet.Enabled = !isSV;
             btnTuChoi.Enabled = !isSV;
-            txtMaDeTai.Enabled = isSV; // only SV can input
+
+            // Cho phép SV và Admin  nhập và tìm đề tài
+            txtMaDeTai.Enabled = isSV || isAdmin;
+            btnTimKiem.Enabled = isSV || isAdmin;
+            btnHuy.Enabled = true;
         }
 
         private void LoadData()
@@ -57,13 +71,32 @@ namespace GUI
                 MessageBox.Show("Vui lòng nhập mã đề tài để tìm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            // Lấy kết quả tìm kiếm
             var dt = bus.TimKiemDeTai(maDeTai);
             dgvDangKyDeTai.DataSource = dt;
             dgvDangKyDeTai.ClearSelection();
-            if (dt.Rows.Count > 0) selectedMaDeTai = dt.Rows[0]["MaDeTai"].ToString();
+
+            // Nếu là Admin → tắt hết các nút còn lại, chỉ để lại Hủy
+            if (Session.Role == "Admin")
+            {
+                btnDangKy.Enabled = false;
+                btnDuyet.Enabled = false;
+                btnTuChoi.Enabled = false;
+                btnTimKiem.Enabled = false;
+                // txtMaDeTai vẫn bật để có thể gõ lại nếu muốn
+            }
+
+            // Gán selectedMaDeTai / selectedMaDangKy như trước
+            if (dt.Rows.Count > 0)
+            {
+                selectedMaDeTai = dt.Rows[0]["MaDeTai"].ToString();
+                if (dt.Columns.Contains("MaDangKy"))
+                    selectedMaDangKy = dt.Rows[0]["MaDangKy"].ToString();
+            }
             else
             {
-                selectedMaDeTai = null;
+                selectedMaDeTai = selectedMaDangKy = null;
                 MessageBox.Show("Không tìm thấy đề tài.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -151,6 +184,16 @@ namespace GUI
             {
                 selectedMaDeTai = null;
             }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            txtMaDeTai.Clear();
+            selectedMaDeTai = selectedMaDangKy = null;
+
+            // Nạp lại dữ liệu & permissions như lúc load form
+            LoadData();
+            ApplyRolePermissions();
         }
     }
 }

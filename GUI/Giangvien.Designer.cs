@@ -164,6 +164,7 @@
             txtMaGV.Name = "txtMaGV";
             txtMaGV.Size = new Size(227, 27);
             txtMaGV.TabIndex = 1;
+            txtMaGV.Click += txtMaGV_Click;
             // 
             // label2
             // 

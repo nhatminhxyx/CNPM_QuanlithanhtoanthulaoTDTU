@@ -45,7 +45,7 @@ namespace GUI
                 Session.Username = taikhoan.Username;
                 Session.Role = result; // Lưu role vào session
                 MessageBox.Show("Đăng nhập thành công với quyền: " + result);
-                
+
             }
 
 
@@ -85,6 +85,11 @@ namespace GUI
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            txtMatkhau.UseSystemPasswordChar = false;
         }
     }
 }

@@ -44,7 +44,7 @@ CREATE TABLE DeTai (
     FOREIGN KEY (MaKhoa) REFERENCES Khoa(MaKhoa),
     FOREIGN KEY (MaGV) REFERENCES GiangVien(MaGV)
 );
-alter table DeTai add Trangthai nvarchar(20) default 
+alter table DeTai add TrangThai nvarchar(20) default N'Chưa thanh toán'
 
 -- Bảng SinhVien
 CREATE TABLE SinhVien (

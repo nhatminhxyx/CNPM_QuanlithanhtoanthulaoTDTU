@@ -14,8 +14,7 @@ namespace BUS
             dal.GetAllDeTai();
 
         // Lấy MaGV, KinhPhi
-        public string GetMaGVByMaDeTai(string maDeTai) =>
-            dal.GetMaGVByMaDeTai(maDeTai);
+       
 
         public double? GetKinhPhiByMaDeTai(string maDeTai) =>
             dal.GetKinhPhiByMaDeTai(maDeTai);
@@ -39,5 +38,9 @@ namespace BUS
 
         public bool HasBeenPaid(string maDeTai) =>
             dal.HasBeenPaid(maDeTai);
-    }
+        public DataTable GetDeTaiByMaDeTai(string maDeTai)
+        => dal.GetDeTaiByMaDeTai(maDeTai);
+        public DataTable GetDeTaiByMaGV(string maGV)
+          => dal.GetDeTaiByMaGV(maGV);
+    }   
 }
