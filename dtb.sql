@@ -180,6 +180,13 @@ INSERT INTO Users (Username, Password, Role) VALUES
 ('admin', 'admin123', 'Admin');
 
 
+delete from GiangVien
+delete from Users
+delete from SinhVien
+delete from DeTai
+delete FROM ThanhToan;
+delete from DangKyDeTai
+
 select * from GiangVien
 select * from Users
 select * from SinhVien

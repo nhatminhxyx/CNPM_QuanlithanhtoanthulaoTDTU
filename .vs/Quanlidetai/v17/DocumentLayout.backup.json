@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "D:\\cnpm\\Quanlidetai\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|d:\\cnpm\\quanlidetai\\gui\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|solutionrelative:gui\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|D:\\cnpm\\Quanlidetai\\gui\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|solutionrelative:gui\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|d:\\cnpm\\quanlidetai\\gui\\detai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|solutionrelative:gui\\detai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|D:\\cnpm\\Quanlidetai\\gui\\detai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|solutionrelative:gui\\detai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63896CAB-54C0-492B-B85F-566BC842697F}|DAL\\DAL.csproj|d:\\cnpm\\quanlidetai\\dal\\detaidal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63896CAB-54C0-492B-B85F-566BC842697F}|DAL\\DAL.csproj|solutionrelative:dal\\detaidal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B998068-12C8-492A-A5A7-A1FBDB952275}|BUS\\BUS.csproj|d:\\cnpm\\quanlidetai\\bus\\detaibus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B998068-12C8-492A-A5A7-A1FBDB952275}|BUS\\BUS.csproj|solutionrelative:bus\\detaibus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63896CAB-54C0-492B-B85F-566BC842697F}|DAL\\DAL.csproj|d:\\cnpm\\quanlidetai\\dal\\sinhviendal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63896CAB-54C0-492B-B85F-566BC842697F}|DAL\\DAL.csproj|solutionrelative:dal\\sinhviendal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|d:\\cnpm\\quanlidetai\\gui\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|solutionrelative:gui\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,7 +55,7 @@
       "RelativeMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|solutionrelative:gui\\configform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|d:\\cnpm\\quanlidetai\\gui\\dangkidetai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|D:\\cnpm\\Quanlidetai\\gui\\dangkidetai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|solutionrelative:gui\\dangkidetai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -71,18 +99,6 @@
       "RelativeMoniker": "D:0:0:{17E6958E-2E62-4A83-BA4C-D702C6CBCAAE}|DTO\\DTO.csproj|solutionrelative:dto\\dto.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|D:\\cnpm\\Quanlidetai\\gui\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|solutionrelative:gui\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63896CAB-54C0-492B-B85F-566BC842697F}|DAL\\DAL.csproj|d:\\cnpm\\quanlidetai\\dal\\sinhviendal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63896CAB-54C0-492B-B85F-566BC842697F}|DAL\\DAL.csproj|solutionrelative:dal\\sinhviendal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B998068-12C8-492A-A5A7-A1FBDB952275}|BUS\\BUS.csproj|d:\\cnpm\\quanlidetai\\bus\\sinhvienbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B998068-12C8-492A-A5A7-A1FBDB952275}|BUS\\BUS.csproj|solutionrelative:bus\\sinhvienbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|d:\\cnpm\\quanlidetai\\gui\\giangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|solutionrelative:gui\\giangvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -115,28 +131,12 @@
       "RelativeMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|solutionrelative:gui\\gui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|D:\\cnpm\\Quanlidetai\\gui\\detai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|solutionrelative:gui\\detai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{63896CAB-54C0-492B-B85F-566BC842697F}|DAL\\DAL.csproj|d:\\cnpm\\quanlidetai\\dal\\taikhoanaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63896CAB-54C0-492B-B85F-566BC842697F}|DAL\\DAL.csproj|solutionrelative:dal\\taikhoanaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B998068-12C8-492A-A5A7-A1FBDB952275}|BUS\\BUS.csproj|d:\\cnpm\\quanlidetai\\bus\\detaibus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B998068-12C8-492A-A5A7-A1FBDB952275}|BUS\\BUS.csproj|solutionrelative:bus\\detaibus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8B998068-12C8-492A-A5A7-A1FBDB952275}|BUS\\BUS.csproj|d:\\cnpm\\quanlidetai\\bus\\taikhoanbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B998068-12C8-492A-A5A7-A1FBDB952275}|BUS\\BUS.csproj|solutionrelative:bus\\taikhoanbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B998068-12C8-492A-A5A7-A1FBDB952275}|BUS\\BUS.csproj|d:\\cnpm\\quanlidetai\\bus\\dangkydetaibus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B998068-12C8-492A-A5A7-A1FBDB952275}|BUS\\BUS.csproj|solutionrelative:bus\\dangkydetaibus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|d:\\cnpm\\quanlidetai\\gui\\detai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|solutionrelative:gui\\detai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{63896CAB-54C0-492B-B85F-566BC842697F}|DAL\\DAL.csproj|d:\\cnpm\\quanlidetai\\dal\\dangkydetaidal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -149,10 +149,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{17E6958E-2E62-4A83-BA4C-D702C6CBCAAE}|DTO\\DTO.csproj|d:\\cnpm\\quanlidetai\\dto\\sinhviendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17E6958E-2E62-4A83-BA4C-D702C6CBCAAE}|DTO\\DTO.csproj|solutionrelative:dto\\sinhviendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|d:\\cnpm\\quanlidetai\\gui\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5135BD85-74CA-40AB-A23D-770427452C09}|GUI\\GUI.csproj|solutionrelative:gui\\sinhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{17E6958E-2E62-4A83-BA4C-D702C6CBCAAE}|DTO\\DTO.csproj|d:\\cnpm\\quanlidetai\\dto\\detaidto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -198,13 +194,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 2,
               "Title": "Detai.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\Detai.cs",
               "RelativeDocumentMoniker": "GUI\\Detai.cs",
               "ToolTip": "D:\\cnpm\\Quanlidetai\\GUI\\Detai.cs",
               "RelativeToolTip": "GUI\\Detai.cs",
-              "ViewState": "AgIAAOoAAAAAAAAAAAAUwBMBAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAEEBAAAAAAAAAAAIwFYBAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T02:08:30.751Z",
               "IsPinned": true,
@@ -212,31 +208,95 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DangNhap.cs [Design]",
-              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\DangNhap.cs",
-              "RelativeDocumentMoniker": "GUI\\DangNhap.cs",
-              "ToolTip": "D:\\cnpm\\Quanlidetai\\GUI\\DangNhap.cs [Design]*",
-              "RelativeToolTip": "GUI\\DangNhap.cs [Design]*",
+              "DocumentIndex": 4,
+              "Title": "DeTaiDAL.cs",
+              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\DAL\\DeTaiDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\DeTaiDAL.cs",
+              "ToolTip": "D:\\cnpm\\Quanlidetai\\DAL\\DeTaiDAL.cs",
+              "RelativeToolTip": "DAL\\DeTaiDAL.cs",
+              "ViewState": "AgIAALgAAAAAAAAAAAAiwOUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T04:17:43.72Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-05T03:14:24.996Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "DoiMatKhau.cs [Design]",
-              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\DoiMatKhau.cs",
-              "RelativeDocumentMoniker": "GUI\\DoiMatKhau.cs",
-              "ToolTip": "D:\\cnpm\\Quanlidetai\\GUI\\DoiMatKhau.cs [Design]",
-              "RelativeToolTip": "GUI\\DoiMatKhau.cs [Design]",
+              "Title": "Detai.cs [Design]",
+              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\Detai.cs",
+              "RelativeDocumentMoniker": "GUI\\Detai.cs",
+              "ToolTip": "D:\\cnpm\\Quanlidetai\\GUI\\Detai.cs [Design]",
+              "RelativeToolTip": "GUI\\Detai.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T16:54:20.445Z",
+              "WhenOpened": "2025-04-22T23:02:57.451Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Sinhvien.cs [Design]",
+              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\Sinhvien.cs",
+              "RelativeDocumentMoniker": "GUI\\Sinhvien.cs",
+              "ToolTip": "D:\\cnpm\\Quanlidetai\\GUI\\Sinhvien.cs [Design]*",
+              "RelativeToolTip": "GUI\\Sinhvien.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T11:41:08.271Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Sinhvien.cs",
+              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\Sinhvien.cs",
+              "RelativeDocumentMoniker": "GUI\\Sinhvien.cs",
+              "ToolTip": "D:\\cnpm\\Quanlidetai\\GUI\\Sinhvien.cs*",
+              "RelativeToolTip": "GUI\\Sinhvien.cs*",
+              "ViewState": "AgIAALkAAAAAAAAAAAAswOAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T11:38:43.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DeTaiBUS.cs",
+              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\BUS\\DeTaiBUS.cs",
+              "RelativeDocumentMoniker": "BUS\\DeTaiBUS.cs",
+              "ToolTip": "D:\\cnpm\\Quanlidetai\\BUS\\DeTaiBUS.cs",
+              "RelativeToolTip": "BUS\\DeTaiBUS.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAkwFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T02:32:39.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DangNhap.cs",
+              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\DangNhap.cs",
+              "RelativeDocumentMoniker": "GUI\\DangNhap.cs",
+              "ToolTip": "D:\\cnpm\\Quanlidetai\\GUI\\DangNhap.cs",
+              "RelativeToolTip": "GUI\\DangNhap.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAswF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T10:59:22.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SinhVienDAL.cs",
+              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\DAL\\SinhVienDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\SinhVienDAL.cs",
+              "ToolTip": "D:\\cnpm\\Quanlidetai\\DAL\\SinhVienDAL.cs",
+              "RelativeToolTip": "DAL\\SinhVienDAL.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAYwJYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T11:35:05.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "DoiMatKhau.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\DoiMatKhau.cs",
               "RelativeDocumentMoniker": "GUI\\DoiMatKhau.cs",
@@ -249,20 +309,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DangNhap.cs",
-              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\DangNhap.cs",
-              "RelativeDocumentMoniker": "GUI\\DangNhap.cs",
-              "ToolTip": "D:\\cnpm\\Quanlidetai\\GUI\\DangNhap.cs*",
-              "RelativeToolTip": "GUI\\DangNhap.cs*",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAcwFsAAAA0AAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "DoiMatKhau.cs [Design]",
+              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\DoiMatKhau.cs",
+              "RelativeDocumentMoniker": "GUI\\DoiMatKhau.cs",
+              "ToolTip": "D:\\cnpm\\Quanlidetai\\GUI\\DoiMatKhau.cs [Design]",
+              "RelativeToolTip": "GUI\\DoiMatKhau.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T10:59:22.303Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T16:54:20.445Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
+              "Title": "DangNhap.cs [Design]",
+              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\DangNhap.cs",
+              "RelativeDocumentMoniker": "GUI\\DangNhap.cs",
+              "ToolTip": "D:\\cnpm\\Quanlidetai\\GUI\\DangNhap.cs [Design]*",
+              "RelativeToolTip": "GUI\\DangNhap.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T04:17:43.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "ConfigForm.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\ConfigForm.cs",
               "RelativeDocumentMoniker": "GUI\\ConfigForm.cs",
@@ -275,31 +344,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "ConfigForm.cs [Design]",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\ConfigForm.cs",
               "RelativeDocumentMoniker": "GUI\\ConfigForm.cs",
               "ToolTip": "D:\\cnpm\\Quanlidetai\\GUI\\ConfigForm.cs [Design]",
               "RelativeToolTip": "GUI\\ConfigForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T12:00:26.424Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-03T12:00:26.424Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "DangKiDeTai.cs [Design]",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\DangKiDeTai.cs",
               "RelativeDocumentMoniker": "GUI\\DangKiDeTai.cs",
               "ToolTip": "D:\\cnpm\\Quanlidetai\\GUI\\DangKiDeTai.cs [Design]",
               "RelativeToolTip": "GUI\\DangKiDeTai.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T09:16:04.497Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-30T09:16:04.497Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "DangKiDeTai.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\DangKiDeTai.cs",
               "RelativeDocumentMoniker": "GUI\\DangKiDeTai.cs",
@@ -311,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "ThanhToanDAL.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\DAL\\ThanhToanDAL.cs",
               "RelativeDocumentMoniker": "DAL\\ThanhToanDAL.cs",
@@ -323,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "Thanhtoan.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\Thanhtoan.cs",
               "RelativeDocumentMoniker": "GUI\\Thanhtoan.cs",
@@ -336,7 +403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "ThanhToanBUS.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\BUS\\ThanhToanBUS.cs",
               "RelativeDocumentMoniker": "BUS\\ThanhToanBUS.cs",
@@ -348,7 +415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "Thanhtoan.cs [Design]",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\Thanhtoan.cs",
               "RelativeDocumentMoniker": "GUI\\Thanhtoan.cs",
@@ -359,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "FormMain.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\FormMain.cs",
               "RelativeDocumentMoniker": "GUI\\FormMain.cs",
@@ -372,7 +439,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "FormMain.cs [Design]",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\FormMain.cs",
               "RelativeDocumentMoniker": "GUI\\FormMain.cs",
@@ -383,7 +450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\Program.cs",
               "RelativeDocumentMoniker": "GUI\\Program.cs",
@@ -395,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "ThanhToanDTO.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\DTO\\ThanhToanDTO.cs",
               "RelativeDocumentMoniker": "DTO\\ThanhToanDTO.cs",
@@ -407,7 +474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "DTO.csproj",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\DTO\\DTO.csproj",
               "RelativeDocumentMoniker": "DTO\\DTO.csproj",
@@ -419,42 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Sinhvien.cs [Design]",
-              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\Sinhvien.cs",
-              "RelativeDocumentMoniker": "GUI\\Sinhvien.cs",
-              "ToolTip": "D:\\cnpm\\Quanlidetai\\GUI\\Sinhvien.cs [Design]",
-              "RelativeToolTip": "GUI\\Sinhvien.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T11:41:08.271Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "SinhVienDAL.cs",
-              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\DAL\\SinhVienDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\SinhVienDAL.cs",
-              "ToolTip": "D:\\cnpm\\Quanlidetai\\DAL\\SinhVienDAL.cs",
-              "RelativeToolTip": "DAL\\SinhVienDAL.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAAwJYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T11:35:05.445Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "SinhVienBUS.cs",
-              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\BUS\\SinhVienBUS.cs",
-              "RelativeDocumentMoniker": "BUS\\SinhVienBUS.cs",
-              "ToolTip": "D:\\cnpm\\Quanlidetai\\BUS\\SinhVienBUS.cs",
-              "RelativeToolTip": "BUS\\SinhVienBUS.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T11:35:53.105Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "Giangvien.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\Giangvien.cs",
               "RelativeDocumentMoniker": "GUI\\Giangvien.cs",
@@ -467,7 +499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "GiangVienDAL.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\DAL\\GiangVienDAL.cs",
               "RelativeDocumentMoniker": "DAL\\GiangVienDAL.cs",
@@ -479,7 +511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "GiangVienBUS.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\BUS\\GiangVienBUS.cs",
               "RelativeDocumentMoniker": "BUS\\GiangVienBUS.cs",
@@ -491,7 +523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "Giangvien.cs [Design]",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\Giangvien.cs",
               "RelativeDocumentMoniker": "GUI\\Giangvien.cs",
@@ -502,7 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "DatabaseAccess.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\DAL\\DatabaseAccess.cs",
               "RelativeDocumentMoniker": "DAL\\DatabaseAccess.cs",
@@ -514,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "FormMain.Designer.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\FormMain.Designer.cs",
               "RelativeDocumentMoniker": "GUI\\FormMain.Designer.cs",
@@ -526,7 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "DangKyDeTaiDTO.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\DTO\\DangKyDeTaiDTO.cs",
               "RelativeDocumentMoniker": "DTO\\DangKyDeTaiDTO.cs",
@@ -538,7 +570,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "GUI.csproj",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\GUI.csproj",
               "RelativeDocumentMoniker": "GUI\\GUI.csproj",
@@ -550,7 +582,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "TaiKhoanAccess.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\DAL\\TaiKhoanAccess.cs",
               "RelativeDocumentMoniker": "DAL\\TaiKhoanAccess.cs",
@@ -562,19 +594,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "DeTaiBUS.cs",
-              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\BUS\\DeTaiBUS.cs",
-              "RelativeDocumentMoniker": "BUS\\DeTaiBUS.cs",
-              "ToolTip": "D:\\cnpm\\Quanlidetai\\BUS\\DeTaiBUS.cs",
-              "RelativeToolTip": "BUS\\DeTaiBUS.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAUwFUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T02:32:39.592Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "TaiKhoanBus.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\BUS\\TaiKhoanBus.cs",
               "RelativeDocumentMoniker": "BUS\\TaiKhoanBus.cs",
@@ -583,18 +603,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-06T11:31:04.178Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "DangKyDeTaiBUS.cs",
-              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\BUS\\DangKyDeTaiBUS.cs",
-              "RelativeDocumentMoniker": "BUS\\DangKyDeTaiBUS.cs",
-              "ToolTip": "D:\\cnpm\\Quanlidetai\\BUS\\DangKyDeTaiBUS.cs",
-              "RelativeToolTip": "BUS\\DangKyDeTaiBUS.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T11:24:39.784Z"
             },
             {
               "$type": "Document",
@@ -635,18 +643,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 37,
-              "Title": "Sinhvien.cs",
-              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\Sinhvien.cs",
-              "RelativeDocumentMoniker": "GUI\\Sinhvien.cs",
-              "ToolTip": "D:\\cnpm\\Quanlidetai\\GUI\\Sinhvien.cs",
-              "RelativeToolTip": "GUI\\Sinhvien.cs",
-              "ViewState": "AgIAAPkAAAAAAAAAAAA6wCEBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T11:38:43.138Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
               "Title": "DeTaiDTO.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\DTO\\DeTaiDTO.cs",
               "RelativeDocumentMoniker": "DTO\\DeTaiDTO.cs",
@@ -658,7 +654,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 38,
               "Title": "BUS.csproj",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\BUS\\BUS.csproj",
               "RelativeDocumentMoniker": "BUS\\BUS.csproj",
@@ -670,7 +666,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 39,
               "Title": "Session.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\Common\\Session.cs",
               "RelativeDocumentMoniker": "GUI\\Common\\Session.cs",
@@ -682,7 +678,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 40,
               "Title": "TaiKhoan.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\DTO\\TaiKhoan.cs",
               "RelativeDocumentMoniker": "DTO\\TaiKhoan.cs",
@@ -694,7 +690,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 41,
               "Title": "Detai.Designer.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\Detai.Designer.cs",
               "RelativeDocumentMoniker": "GUI\\Detai.Designer.cs",
@@ -702,11 +698,12 @@
               "RelativeToolTip": "GUI\\Detai.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T02:55:44.468Z"
+              "WhenOpened": "2025-04-29T02:55:44.468Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 42,
               "Title": "GiangVienDTO.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\DTO\\GiangVienDTO.cs",
               "RelativeDocumentMoniker": "DTO\\GiangVienDTO.cs",
@@ -718,20 +715,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 43,
               "Title": "DangNhap.Designer.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\DangNhap.Designer.cs",
               "RelativeDocumentMoniker": "GUI\\DangNhap.Designer.cs",
-              "ToolTip": "D:\\cnpm\\Quanlidetai\\GUI\\DangNhap.Designer.cs*",
-              "RelativeToolTip": "GUI\\DangNhap.Designer.cs*",
+              "ToolTip": "D:\\cnpm\\Quanlidetai\\GUI\\DangNhap.Designer.cs",
+              "RelativeToolTip": "GUI\\DangNhap.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T04:59:24.121Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T04:59:24.121Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 44,
               "Title": "DoiMatKhau.Designer.cs",
               "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\DoiMatKhau.Designer.cs",
               "RelativeDocumentMoniker": "GUI\\DoiMatKhau.Designer.cs",
@@ -739,19 +735,7 @@
               "RelativeToolTip": "GUI\\DoiMatKhau.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T16:58:35.452Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Detai.cs [Design]",
-              "DocumentMoniker": "D:\\cnpm\\Quanlidetai\\GUI\\Detai.cs",
-              "RelativeDocumentMoniker": "GUI\\Detai.cs",
-              "ToolTip": "D:\\cnpm\\Quanlidetai\\GUI\\Detai.cs [Design]",
-              "RelativeToolTip": "GUI\\Detai.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T23:02:57.451Z"
+              "WhenOpened": "2025-04-22T16:58:35.452Z"
             }
           ]
         }

@@ -197,16 +197,30 @@ namespace GUI
 
         private void dgvSinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) return;
+            // Bỏ qua khi click header hoặc vùng trống
+            if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
+
+            var row = dgvSinhVien.Rows[e.RowIndex];
+
+            // Lấy giá trị an toàn với DBNull
+            string maSV = row.Cells["MaSV"].Value as string;
+            if (string.IsNullOrEmpty(maSV)) return;
 
             isEditMode = true;
-            var row = dgvSinhVien.Rows[e.RowIndex];
-            txtMaSV.Text = row.Cells["MaSV"].Value.ToString();
-            txtHoTen.Text = row.Cells["HoTen"].Value.ToString();
-            cbKhoa.SelectedValue = row.Cells["MaKhoa"].Value.ToString();
-            txtLop.Text = row.Cells["Lop"].Value.ToString();
-            dtpNgaySinh.Value = Convert.ToDateTime(row.Cells["NgaySinh"].Value);
-            txtQueQuan.Text = row.Cells["QueQuan"].Value.ToString();
+
+            txtMaSV.Text = maSV;
+            txtHoTen.Text = row.Cells["HoTen"].Value?.ToString() ?? string.Empty;
+            cbKhoa.SelectedValue = row.Cells["MaKhoa"].Value?.ToString() ?? cbKhoa.SelectedValue;
+            txtLop.Text = row.Cells["Lop"].Value?.ToString() ?? string.Empty;
+
+            // Ngày sinh
+            var ngaySinhObj = row.Cells["NgaySinh"].Value;
+            if (ngaySinhObj != null && ngaySinhObj != DBNull.Value)
+                dtpNgaySinh.Value = Convert.ToDateTime(ngaySinhObj);
+            else
+                dtpNgaySinh.Value = DateTime.Now;
+
+            txtQueQuan.Text = row.Cells["QueQuan"].Value?.ToString() ?? string.Empty;
 
             SetViewMode();
         }
@@ -284,6 +298,11 @@ namespace GUI
         {
             ClearForm();
             dgvSinhVien.DataSource = null;
+        }
+
+        private void txtMaSV_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

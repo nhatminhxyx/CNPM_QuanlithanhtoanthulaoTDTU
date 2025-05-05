@@ -17,6 +17,8 @@ namespace GUI
     {
         private DeTaiBUS bus = new DeTaiBUS();
         private bool isEditMode = false;
+        private bool isFormInitializing = false;
+        private bool suppressAutoGen = false; // Flag ngăn tự động sinh mã khi tìm kiếm
         public Detai()
         {
             InitializeComponent();
@@ -56,14 +58,17 @@ namespace GUI
         private void SetAddMode()
         {
             isEditMode = false;
-            txtMaDeTai.Enabled = true; // Mã tự động sinh
+            suppressAutoGen = false; // cho phép auto gen khi chọn khoa
+
+            txtMaDeTai.Enabled = true;
             txtTenDeTai.Enabled = true;
             cbKhoa.Enabled = true;
             txtMaGiangVien.Enabled = true;
             txtKinhPhi.Enabled = true;
             dtpNgayBatDau.Enabled = true;
             dtpNgayKetThuc.Enabled = true;
-            btnThem.Enabled = true;
+
+            btnThem.Enabled = Session.Role == "Admin";
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
             btnLuu.Enabled = false;
@@ -72,6 +77,8 @@ namespace GUI
         private void SetViewMode()
         {
             isEditMode = false;
+            suppressAutoGen = true; // ngăn auto gen khi xem
+
             txtMaDeTai.Enabled = false;
             txtTenDeTai.Enabled = false;
             cbKhoa.Enabled = false;
@@ -79,9 +86,10 @@ namespace GUI
             txtKinhPhi.Enabled = false;
             dtpNgayBatDau.Enabled = false;
             dtpNgayKetThuc.Enabled = false;
+
             btnThem.Enabled = false;
-            btnSua.Enabled = true;
-            btnXoa.Enabled = true;
+            btnSua.Enabled = Session.Role == "Admin";
+            btnXoa.Enabled = Session.Role == "Admin";
             btnLuu.Enabled = false;
         }
 
@@ -261,27 +269,43 @@ namespace GUI
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            string key = !string.IsNullOrWhiteSpace(txtMaDeTai.Text) ? txtMaDeTai.Text : txtTenDeTai.Text;
-
-            // Nếu chọn Khoa và ngày bắt đầu: lọc theo điều kiện
-            if (cbKhoa.SelectedIndex >= 0 && dtpNgayBatDau.Value != null)
-            {
-                string maKhoa = cbKhoa.SelectedValue.ToString();
-                DateTime ngayBatDau = dtpNgayBatDau.Value.Date;
-
-                var dt = bus.GetDeTaiByKhoaAndDate(maKhoa, ngayBatDau);
-                dgvDeTai.DataSource = dt;
-            }
+            suppressAutoGen = true; // tắt tạo mã khi thay đổi cbKhoa trong search
+            DataTable dt;
+            if (cbKhoa.SelectedIndex >= 0)
+                dt = bus.GetDeTaiByKhoaAndDate(cbKhoa.SelectedValue.ToString(), dtpNgayBatDau.Value.Date);
             else
             {
-                // Nếu không có điều kiện cụ thể, tìm theo mã hoặc tên đề tài
-                var dt = bus.SearchDeTai(key);
-                dgvDeTai.DataSource = dt;
+                string key = !string.IsNullOrWhiteSpace(txtMaDeTai.Text) ? txtMaDeTai.Text : txtTenDeTai.Text;
+                dt = bus.SearchDeTai(key);
             }
-
+            dgvDeTai.DataSource = dt;
             ApplyRolePermissions();
+            if (dt.Rows.Count == 1)
+                FillFormFromRow(dt.Rows[0]);
+            suppressAutoGen = false; // bật lại cho trường hợp add mới
         }
-
+        private void FillFormFromRow(DataRow row)
+        {
+            txtMaDeTai.Text = row.Field<string>("MaDeTai");
+            txtTenDeTai.Text = row.Field<string>("TenDeTai");
+            cbKhoa.SelectedValue = row.Field<string>("MaKhoa");
+            txtMaGiangVien.Text = row.Field<string>("MaGV");
+            txtKinhPhi.Text = row["KinhPhi"].ToString();
+            dtpNgayBatDau.Value = row.Field<DateTime>("ThoiGianBatDau");
+            dtpNgayKetThuc.Value = row.Field<DateTime>("ThoiGianKetThuc");
+            if (Session.Role == "Admin") SetViewMode();
+            else ClearReadOnly();
+        }
+        private void ClearReadOnly()
+        {
+            txtMaDeTai.Enabled = false;
+            txtTenDeTai.Enabled = false;
+            cbKhoa.Enabled = false;
+            txtMaGiangVien.Enabled = false;
+            txtKinhPhi.Enabled = false;
+            dtpNgayBatDau.Enabled = false;
+            dtpNgayKetThuc.Enabled = false;
+        }
         private void btnHuy_Click(object sender, EventArgs e)
         {
             ClearForm();
@@ -291,55 +315,15 @@ namespace GUI
         private void dgvDeTai_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
-
-            var row = dgvDeTai.Rows[e.RowIndex];
-            txtMaDeTai.Text = row.Cells["MaDeTai"].Value.ToString();
-            txtTenDeTai.Text = row.Cells["TenDeTai"].Value.ToString();
-            cbKhoa.SelectedValue = row.Cells["MaKhoa"].Value.ToString();
-            txtMaGiangVien.Text = row.Cells["MaGV"].Value.ToString();
-            txtKinhPhi.Text = row.Cells["KinhPhi"].Value.ToString();
-            dtpNgayBatDau.Value = Convert.ToDateTime(row.Cells["ThoiGianBatDau"].Value);
-            dtpNgayKetThuc.Value = Convert.ToDateTime(row.Cells["ThoiGianKetThuc"].Value);
-
-            if (Session.Role == "Admin")
-            {
-                SetViewMode(); // Admin được phép chỉnh sửa
-            }
-            else
-            {
-                // SV và GV chỉ được xem, không được sửa hoặc xóa
-                txtMaDeTai.Enabled = false;
-                txtTenDeTai.Enabled = false;
-                cbKhoa.Enabled = false;
-                txtMaGiangVien.Enabled = false;
-                txtKinhPhi.Enabled = false;
-                dtpNgayBatDau.Enabled = false;
-                dtpNgayKetThuc.Enabled = false;
-
-                btnThem.Enabled = false;
-                btnSua.Enabled = false;
-                btnXoa.Enabled = false;
-                btnLuu.Enabled = false;
-            }
+            var row = ((DataTable)dgvDeTai.DataSource).Rows[e.RowIndex];
+            FillFormFromRow(row); 
         }
 
         private void cbKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbKhoa.SelectedIndex < 0) return;
-
-            string selectedMaKhoa = cbKhoa.SelectedValue.ToString();
-
-            if (Session.Role == "Admin")
-            {
-                if (!isEditMode)
-                {
-                    txtMaDeTai.Text = bus.GenerateMaDT(selectedMaKhoa); // Admin được sinh mã tự động
-                }
-            }
-            else
-            {
-                txtMaDeTai.Clear(); // GV và SV không hiển thị mã sinh tự động
-            }
+            if (isFormInitializing || suppressAutoGen) return;
+            if (Session.Role == "Admin" && !isEditMode && cbKhoa.SelectedIndex >= 0)
+                txtMaDeTai.Text = bus.GenerateMaDT(cbKhoa.SelectedValue.ToString());
 
         }
         private void dtpNgayBatDau_ValueChanged(object sender, EventArgs e)

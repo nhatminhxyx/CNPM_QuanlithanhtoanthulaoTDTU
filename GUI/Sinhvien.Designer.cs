@@ -249,6 +249,7 @@
             txtMaSV.Name = "txtMaSV";
             txtMaSV.Size = new Size(227, 27);
             txtMaSV.TabIndex = 1;
+            txtMaSV.TextChanged += txtMaSV_TextChanged;
             // 
             // label2
             // 
